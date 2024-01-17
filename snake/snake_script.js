@@ -1,6 +1,5 @@
 function printGameGrid() {
   gameWindow.innerHTML = "";
-  let j = 0;
   for (let i = 0; i < width * width; i++) {
     const gameGridCell = document.createElement("div");
     gameGridCell.classList.add("grid-item", "flex");
@@ -164,6 +163,7 @@ startBtn.addEventListener("click", () => {
     deleteSnake();
     interval = 500;
     points = 0;
+    pointsDisplay.innerText = `Punteggio: ${points}`;
     pointModifier = 1;
     movement = 1;
     snake = [0, 1, 2];
